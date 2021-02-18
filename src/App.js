@@ -1,20 +1,19 @@
 import './App.css';
 import React from 'react';
 import * as Icon from 'react-bootstrap-icons';
+import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-      <header className="App-header">
-        <h1>React Weather App</h1>
-      </header>
+      <Weather />
   
         <footer>
-          <Icon.Github className="Github-icon"/>{" "}
+          <Icon.Github className="icon-github"/>{" "}
         <strong>
           <a
-            className="Footer-link"
+            className="footer-link"
             href="https://github.com/yvonnesimonewatts/react-weather-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -25,7 +24,6 @@ function App() {
         by Yvonne Simone
       </footer>
       </div>
-
     </div>
   );
 }

@@ -1,0 +1,83 @@
+.Weather {
+  max-width: 570px;
+  margin: 20px auto;
+  padding: 20px 20px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  opacity: 0.9;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+/* SEARCH FORM */
+.Weather .search-form {
+  margin-top: 15px 15px 0 15px;
+}
+
+.Weather .btn-search {
+  color: #330867;
+}
+
+.Weather .btn-search:hover {
+  color: #a29aaa;
+}
+
+.Weather .btn-current-location:hover {
+  color: #330867;
+}
+/* FONT SIZES */
+
+.Weather .date-time,
+.Weather .additional-data {
+  font-size: 14px;
+}
+
+/* SECTION: OVERVIEW */
+.Weather .section-overview {
+  padding-top: 20px;
+}
+
+.Weather .timestamp-wrapper,
+.Weather .temperature-wrapper {
+  padding: 0 15px;
+}
+
+.Weather .location {
+  margin-top: 10px;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.Weather .temperature {
+  padding-right: 30px;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.Weather .temp-unit {
+  position: relative;
+  top: -20px;
+  left: -25px;
+  border-bottom: 1px solid transparent;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.Weather .icon-temp {
+  display: block;
+  margin: 0 auto;
+  font-size: 70px;
+}
+
+.Weather .description {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.Weather .additional-data {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  list-style-type: none;
+}
