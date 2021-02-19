@@ -1,83 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Icon from 'react-bootstrap-icons';
+import axios from 'axios';
+import WeatherData from "./WeatherData";
 
 import "./Weather.css";
 
-export default function Weather() {
-   let weatherData = {
-    date: "Thursday | 18 February | 18:00",
-    location: "London",
-    temperature: 8,
-    description: "clouds",
-    humidity: 61,
-    wind: 11
-  };
+export default function Weather(props) {
+  const [dispalyData, setDispalyData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
-return (
-  <div className="Weather border rounded shadow">
-    <form className="search-form">
-      <div className="row g-2 justify-content-end">
-        <div className="col col-sm-auto">
-          <div className="input-group">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Enter a city"
-              autoComplete="off"
-              />
-              <button type="submit" className="btn btn-light btn-search">
-                <Icon.Search className="icon-search"/>
+  function handleWeather(response) {
+    setDispalyData({
+      ready: true,
+      date: "Friday | 19 February | 14:00",
+      city: response.data.name,
+      temperature: Math.round(response.data.main.temp),
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description: response.data.weather[0].main,
+      humidity: Math.round(response.data.main.humidity),
+      wind: Math.round(response.data.wind.speed * 2.237)
+    });
+  }
+
+  function search() {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=fe75cdcdc7e5e9de834be3340e916f6e&units=metric`;
+    axios.get(apiUrl).then(handleWeather);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
+  if(dispalyData.ready) {
+    return (
+      <div className="Weather border rounded shadow">
+        <form className="search-form" onSubmit={handleSubmit}>
+          <div className="row g-2 justify-content-end">
+            <div className="col col-sm-auto">
+              <div className="input-group">
+                <input
+                  type="search"
+                  className="form-control"
+                   onChange={updateCity}
+                  placeholder="Enter a city"
+                  autoComplete="off"
+                  />
+                  <button type="submit" className="btn btn-light btn-search">
+                    <Icon.Search className="icon-search"/>
+                  </button>
+              </div>
+            </div>
+            <div className="col-auto btn-group">
+              <button
+                type="submit"
+                className="btn btn-outline-light btn-current-location"
+                >
+                  <Icon.ArrowsMove className="icon-current-location"/>
               </button>
-          </div>
-        </div>
-        <div className="col-auto btn-group">
-          <button
-            type="submit"
-            className="btn btn-outline-light btn-current-location"
-            >
-              <Icon.ArrowsMove className="icon-current-location"/>
-          </button>
-        </div>
-      </div>
-    </form>
-
-    <section className="section-overview">
-      <div className="row timestamp-wrapper">
-        <div className="col date-time">{weatherData.date}</div>
-      </div>
-
-      <div className="row temperature-wrapper">
-        <div className="col-xs-12 col-md-5 left-temperature-wrapper">
-          <div className="location">{weatherData.location}</div>
-            <div className="currentTemperature">
-              <span className="temperature">{weatherData.temperature}°</span>
-              <span className="temp-unit"> °C | °F </span>
             </div>
-        </div>
-
-          <div className="col-md-3 mid-temperature-wrapper">
-            <Icon.Cloud className="icon-temp"/>
           </div>
+        </form>
 
-            <div className="col-md-4 right-temperature-wrapper align-self-end">
-              <ul className="additional-data">
-                <li>
-                  <span className="description">
-                    {weatherData.description}
-                  </span>
-                </li>
-                <li>
-                  Humidity:{" "}
-                  <span className="humidity">{weatherData.humidity}</span>%
-                </li>
-                <li>
-                  Wind: <span className="wind">{weatherData.wind}</span>
-                  mph
-                </li>
-              </ul>
-            </div>
+         <WeatherData data={dispalyData}/>
+
       </div>
-    </section>
-  </div>
-  );
+      );
+  } else {
+    search();
+    return (<div>"loding"</div>);
+  }
 }
