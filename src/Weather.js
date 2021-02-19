@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as Icon from 'react-bootstrap-icons';
+
 import axios from 'axios';
 import WeatherData from "./WeatherData";
 
@@ -10,7 +11,6 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleWeather(response) {
-    console.log(response.data);
     setDispalyData({
       ready: true,
       date: new Date(response.data.dt * 1000),
@@ -37,6 +37,17 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function handleLocation(position) {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&APPID=fe75cdcdc7e5e9de834be3340e916f6e`;
+
+    axios.get(apiUrl).then(handleWeather);
+}
+
+  function updateCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(handleLocation);
+  }
+
   if(dispalyData.ready) {
     return (
       <div className="Weather border rounded shadow">
@@ -60,6 +71,7 @@ export default function Weather(props) {
               <button
                 type="submit"
                 className="btn btn-outline-light btn-current-location"
+                onClick={updateCurrentLocation}
                 >
                   <Icon.ArrowsMove className="icon-current-location"/>
               </button>
@@ -73,6 +85,6 @@ export default function Weather(props) {
       );
   } else {
     search();
-    return (<div>"loding"</div>);
+    return (<div>updating weather</div>);
   }
 }
