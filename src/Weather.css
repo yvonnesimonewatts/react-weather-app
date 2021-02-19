@@ -47,20 +47,31 @@
   font-weight: 500;
 }
 
-.Weather .temperature {
+.ConvertTempUnit .temperature {
   padding-right: 30px;
   font-size: 45px;
   font-weight: 500;
   line-height: 70px;
 }
 
-.Weather .temp-unit {
+.ConvertTempUnit .temp-unit {
   position: relative;
   top: -20px;
   left: -25px;
   border-bottom: 1px solid transparent;
   font-size: 22px;
   font-weight: 500;
+}
+
+.ConvertTempUnit .temp-unit a {
+  color: #ef7d5e;
+  text-decoration: none;
+}
+
+.ConvertTempUnit .temp-unit a:hover {
+  color: #a29aaa;
+  border-bottom: 1px solid #a29aaa;
+  transition: all 200ms ease-in-out;
 }
 
 .Weather .icon-temp {

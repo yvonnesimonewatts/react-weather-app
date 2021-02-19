@@ -1,5 +1,6 @@
 import React from 'react';
 import FormatDate from "./FormatDate";
+import ConvertTempUnit from "./ConvertTempUnit";
 
 export default function WeatherData(props) {
   return (
@@ -13,8 +14,7 @@ export default function WeatherData(props) {
             <div className="col-xs-12 col-md-5 left-temperature-wrapper">
               <div className="location">{props.data.city}</div>
                 <div className="currentTemperature">
-                  <span className="temperature">{props.data.temperature}°</span>
-                  <span className="temp-unit"> °C | °F </span>
+                  <ConvertTempUnit celsius={props.data.temperature}/>
                 </div>
             </div>
 
