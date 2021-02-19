@@ -10,9 +10,10 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleWeather(response) {
+    console.log(response.data);
     setDispalyData({
       ready: true,
-      date: "Friday | 19 February | 14:00",
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,

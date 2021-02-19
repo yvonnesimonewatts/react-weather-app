@@ -1,11 +1,12 @@
 import React from 'react';
+import FormatDate from "./FormatDate";
 
 export default function WeatherData(props) {
   return (
     <div className="WeatherData">
       <section className="section-overview">
           <div className="row timestamp-wrapper">
-            <div className="col date-time">{props.data.date}</div>
+            <div className="col date-time"><FormatDate date={props.data.date} /></div>
           </div>
 
           <div className="row temperature-wrapper">
