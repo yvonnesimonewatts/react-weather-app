@@ -1,7 +1,7 @@
-import './App.css';
 import React from 'react';
 import * as Icon from 'react-bootstrap-icons';
-import Weather from "./Weather";
+import Weather from './Weather';
+import './App.css';
 
 function App() {
   return (

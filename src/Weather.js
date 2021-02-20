@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import * as Icon from 'react-bootstrap-icons';
-
 import axios from 'axios';
+import * as Icon from 'react-bootstrap-icons';
 import WeatherData from "./WeatherData";
-
+import Forecast from "./Forecast";
 import "./Weather.css";
+
 
 export default function Weather(props) {
   const [dispalyData, setDispalyData] = useState({ ready: false });
@@ -38,7 +38,7 @@ export default function Weather(props) {
   }
 
   function handleLocation(position) {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&APPID=fe75cdcdc7e5e9de834be3340e916f6e`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&APPID=fe75cdcdc7e5e9de834be3340e916f6e&units=metric`;
 
     axios.get(apiUrl).then(handleWeather);
 }
@@ -78,9 +78,8 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-
          <WeatherData data={dispalyData}/>
-
+         <Forecast city={dispalyData.city}/>
       </div>
       );
   } else {

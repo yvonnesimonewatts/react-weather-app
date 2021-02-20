@@ -24,10 +24,9 @@
 .Weather .btn-current-location:hover {
   color: #330867;
 }
-/* FONT SIZES */
 
-.Weather .date-time,
-.Weather .additional-data {
+/* DATE & TIME */
+.Weather .date-time {
   font-size: 14px;
 }
 
@@ -91,4 +90,5 @@
   padding: 0;
   text-align: right;
   list-style-type: none;
+  font-size: 14px;
 }

@@ -1,0 +1,13 @@
+.Forecast {
+  margin: 20px 0 15px;
+}
+
+.ForecastData {
+  margin: 0 5px;
+  text-align: center;
+}
+
+.ForecastData .ForecastHour,
+.ForecastData .ForecastTemp {
+  font-size: 14px;
+}
