@@ -92,3 +92,11 @@
   list-style-type: none;
   font-size: 14px;
 }
+
+.Weather .HourlyForecastHeading {
+  margin: 25px 0 0;
+}
+
+.Weather .DailyForecastHeading {
+  margin: 25px 0 0;
+}

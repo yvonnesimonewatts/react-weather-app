@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ForecastData(props) {
+export default function HourlyForecastData(props) {
   function hours() {
     let date = new Date(props.data.dt * 1000);
     let hours = date.getHours();
@@ -18,10 +18,10 @@ export default function ForecastData(props) {
   }
 
   return(
-    <div className="col-md-2 ForecastData border p-2 mt-2 rounded shadow">
-      <div className="ForecastHour"><strong>{hours()}</strong></div>
+    <div className="col HourlyForecastData border p-2 mt-2 rounded shadow">
+      <div className="Hours"><strong>{hours()}</strong></div>
       {/* image */}
-      <div className="ForecastTemp">
+      <div className="Temp">
       <span><strong>{tempMax()}°</strong></span>
       {" "}|{" "}
       <span>{tempMin()}°</span>

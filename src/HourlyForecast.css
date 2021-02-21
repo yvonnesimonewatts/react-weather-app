@@ -1,0 +1,13 @@
+.HourlyForecast {
+  margin: 0 auto;
+}
+
+.HourlyForecastData {
+  margin: 0 5px;
+  text-align: center;
+}
+
+.HourlyForecastData .Hours,
+.HourlyForecastData .Temp {
+  font-size: 14px;
+}
