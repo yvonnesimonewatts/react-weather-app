@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import axios from "axios";
-import DailyForecastData from "./DailyForecastData";
-
+import React, { useState } from 'react';
+import axios from 'axios';
+import DailyForecastData from './DailyForecastData';
 
 export default function DailyForecast(props) {
   const [loaded, setLoaded] = useState(false);
@@ -15,7 +14,7 @@ export default function DailyForecast(props) {
   if (loaded && props.lat === displayforecast.lat && props.lon === displayforecast.lon) {
     return (
       <div className="row DailyForecast justify-content-center">
-        <DailyForecastData data={displayforecast.daily[0]}  />
+        <DailyForecastData data={displayforecast.daily[0]} />
         <DailyForecastData data={displayforecast.daily[1]}  />
         <DailyForecastData data={displayforecast.daily[2]}  />
         <DailyForecastData data={displayforecast.daily[3]}  />

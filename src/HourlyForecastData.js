@@ -1,4 +1,5 @@
 import React from 'react';
+import WeatherIcon from './WeatherIcon';
 
 export default function HourlyForecastData(props) {
   function hours() {
@@ -20,7 +21,7 @@ export default function HourlyForecastData(props) {
   return(
     <div className="col HourlyForecastData border p-2 mt-2 rounded shadow">
       <div className="Hours"><strong>{hours()}</strong></div>
-      {/* image */}
+      <WeatherIcon code={props.data.weather[0].icon}/>
       <div className="Temp">
       <span><strong>{tempMax()}°</strong></span>
       {" "}|{" "}

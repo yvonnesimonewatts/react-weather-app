@@ -1,4 +1,5 @@
 import React from 'react';
+import WeatherIcon from './WeatherIcon';
 
 export default function DailyForecastData(props) {
  function formatDay(){
@@ -39,7 +40,7 @@ return (
       <div>{formatDate()}</div> 
     </div>
       <div className="col">
-        {/* image */}
+        <WeatherIcon code={props.data.weather[0].icon}/>
         <div className="col Description">
           {props.data.weather[0].main}
         </div>

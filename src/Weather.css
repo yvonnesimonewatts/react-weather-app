@@ -8,6 +8,7 @@
   letter-spacing: 0.5px;
   color: #fff;
 }
+
 /* SEARCH FORM */
 .Weather .search-form {
   margin-top: 15px 15px 0 15px;
@@ -73,10 +74,17 @@
   transition: all 200ms ease-in-out;
 }
 
-.Weather .icon-temp {
+/* .Weather .icon-temp {
   display: block;
   margin: 0 auto;
   font-size: 70px;
+} */
+
+.Main canvas {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
 }
 
 .Weather .description {

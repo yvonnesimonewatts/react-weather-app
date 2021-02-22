@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import HourlyForecastData from "./HourlyForecastData";
+import HourlyForecastData from './HourlyForecastData';
 import './HourlyForecast.css';
 
 export default function HourlyForecast(props) {

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import axios from 'axios';
 import * as Icon from 'react-bootstrap-icons';
-import WeatherData from "./WeatherData";
-import HourlyForecast from "./HourlyForecast";
-import DailyForecast from "./DailyForecast";
-import "./Weather.css";
+import WeatherData from './WeatherData';
+import HourlyForecast from './HourlyForecast';
+import DailyForecast from './DailyForecast';
+import './Weather.css';
 
 
 export default function Weather(props) {
@@ -17,7 +17,8 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      // icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].main,
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed * 2.237),
@@ -81,9 +82,9 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-         <WeatherData data={dispalyData}/>
+         <WeatherData data={dispalyData} />
          <p className="HourlyForecastHeading">Today's weather</p>
-         <HourlyForecast city={dispalyData.city}/>
+         <HourlyForecast city={dispalyData.city} />
          <p className="DailyForecastHeading">Next 5 Days</p>
          <DailyForecast 
             city={dispalyData.city}
