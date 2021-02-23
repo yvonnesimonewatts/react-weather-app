@@ -6,16 +6,17 @@ import HourlyForecast from './HourlyForecast';
 import DailyForecast from './DailyForecast';
 import './Weather.css';
 
-
 export default function Weather(props) {
   const [dispalyData, setDispalyData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("celsius");
 
   function handleWeather(response) {
     setDispalyData({
       ready: true,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
+      // country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       // icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       icon: response.data.weather[0].icon,
@@ -82,14 +83,21 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-         <WeatherData data={dispalyData} />
+         <WeatherData 
+            data={dispalyData} 
+            unit={unit}
+            setUnit={setUnit}
+          />
          <p className="HourlyForecastHeading">Today's weather</p>
-         <HourlyForecast city={dispalyData.city} />
+         <HourlyForecast 
+            city={dispalyData.city} 
+            unit={unit}
+          />
          <p className="DailyForecastHeading">Next 5 Days</p>
          <DailyForecast 
             city={dispalyData.city}
             lon={dispalyData.lon}
-            lat={dispalyData.lat}
+            lat={dispalyData.lat} unit={unit}
           />
       </div>
       );

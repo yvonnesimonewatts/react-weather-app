@@ -18,7 +18,8 @@ export default function HourlyForecastData(props) {
     return `${min}`;
   }
 
-  return(
+  if (props.unit === "celsius") {
+    return(
     <div className="col HourlyForecastData border p-2 mt-2 rounded shadow">
       <div className="Hours"><strong>{hours()}</strong></div>
       <WeatherIcon code={props.data.weather[0].icon}/>
@@ -29,4 +30,19 @@ export default function HourlyForecastData(props) {
       </div>
     </div>
   );
+  } else {
+    return(
+    <div className="col HourlyForecastData border p-2 mt-2 rounded shadow">
+      <div className="Hours"><strong>{hours()}</strong></div>
+      <WeatherIcon code={props.data.weather[0].icon}/>
+      <div className="Temp">
+      <span><strong>{Math.round((tempMax() * 9) / 5 + 32)}°</strong></span>
+      {" "}|{" "}
+      <span>{Math.round((tempMin() * 9) / 5 + 32)}°</span>
+      </div>
+    </div>
+  );
+  }
+
+
 }

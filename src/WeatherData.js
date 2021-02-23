@@ -13,9 +13,15 @@ export default function WeatherData(props) {
 
           <div className="row temperature-wrapper">
             <div className="col-xs-12 col-md-5 left-temperature-wrapper">
-              <div className="location">{props.data.city}</div>
+              <div className="location"><span>{props.data.city},</span> 
+              {/* <span>{props.data.country}</span> */}
+              </div>
                 <div className="currentTemperature">
-                  <ConvertTempUnit celsius={props.data.temperature} />
+                  <ConvertTempUnit 
+                    celsius={props.data.temperature} 
+                    unit={props.unit}
+                    setUnit={props.setUnit}
+                  />
                 </div>
             </div>
 
