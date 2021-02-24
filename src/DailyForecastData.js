@@ -21,8 +21,8 @@ export default function DailyForecastData(props) {
   function formatDate() {
   let date = new Date(props.data.dt * 1000);
   let calendarDate = date.getDate();
-    //  if (calendarDate < 10) {
-    //   calendarDate = `0${calendarDate}`;}
+     if (calendarDate < 10) {
+      calendarDate = `0${calendarDate}`;}
 
     let months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     let month = months[date.getMonth()];
@@ -51,11 +51,13 @@ export default function DailyForecastData(props) {
       <div><strong>{formatDay()}</strong></div> 
       <div>{formatDate()}</div> 
     </div>
-      <div className="col">
-        <WeatherIcon code={props.data.weather[0].icon}/>
-        {/* <div className="col Description">
+      <div className="col IconDescription ">
+        <div className="DailyIcon">
+          <WeatherIcon code={props.data.weather[0].icon}/>
+          </div>
+        <div className="col Description">
           {props.data.weather[0].main}
-        </div> */}
+          </div>
       </div>
         {/* <div className="col Temp">
           <strong>{Math.round(props.data.temp.day)}°</strong>
@@ -77,15 +79,17 @@ export default function DailyForecastData(props) {
       <div><strong>{formatDay()}</strong></div> 
       <div>{formatDate()}</div> 
     </div>
-      <div className="col">
-        <WeatherIcon code={props.data.weather[0].icon}/>
-        {/* <div className="col Description">
+      <div className="col IconDescription ">
+        <div className="DailyIcon">
+          <WeatherIcon code={props.data.weather[0].icon}/>
+          </div>
+        <div className="col Description">
           {props.data.weather[0].main}
-        </div> */}
+          </div>
       </div>
-        {/* <div className="col Temp">
+       {/* <div className="col Temp">
           <strong>{Math.round(props.data.temp.day)}°</strong>
-        </div> */}
+        </div>  */}
           <div className="col High">
             <div><strong>{Math.round((tempMax() * 9) / 5 + 32)}°</strong></div>
             <div>High</div>

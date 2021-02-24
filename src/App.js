@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="container">
       <Weather defaultCity="London"/>
-  
+      
         <footer>
           <Icon.Github className="icon-github"/>{" "}
         <strong>

@@ -74,17 +74,9 @@
   transition: all 200ms ease-in-out;
 }
 
-/* .Weather .icon-temp {
-  display: block;
-  margin: 0 auto;
-  font-size: 70px;
-} */
-
-.Main canvas {
-  display: block;
-  margin: 0 auto;
-  height: 50px;
-  width: 50px;
+.WeatherData .MainIcon {
+  height: 75px;
+  width: 75px;
 }
 
 .Weather .description {

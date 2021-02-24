@@ -18,7 +18,6 @@ export default function Weather(props) {
       city: response.data.name,
       // country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
-      // icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].main,
       humidity: Math.round(response.data.main.humidity),

@@ -26,9 +26,9 @@ export default function WeatherData(props) {
             </div>
 
               <div className="col-md-3 d-block m-auto mid-temperature-wrapper">
-                <div className="Main">
-                <WeatherIcon code={props.data.icon} /></div>
-                 {/* <img src={props.data.icon} alt={props.data.description} className="icon-temp"/> */}
+                <div className="MainIcon">
+                <WeatherIcon code={props.data.icon} />
+                </div>
               </div>
 
                 <div className="col-md-4 right-temperature-wrapper align-self-end">

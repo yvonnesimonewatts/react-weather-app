@@ -11,3 +11,10 @@
 .HourlyForecastData .Temp {
   font-size: 14px;
 }
+
+.HourlyForecastData .HourlyIcon {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+}

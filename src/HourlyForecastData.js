@@ -22,7 +22,7 @@ export default function HourlyForecastData(props) {
     return(
     <div className="col HourlyForecastData border p-2 mt-2 rounded shadow">
       <div className="Hours"><strong>{hours()}</strong></div>
-      <WeatherIcon code={props.data.weather[0].icon}/>
+      <div className="HourlyIcon"><WeatherIcon code={props.data.weather[0].icon}/></div>
       <div className="Temp">
       <span><strong>{tempMax()}°</strong></span>
       {" "}|{" "}
@@ -34,7 +34,7 @@ export default function HourlyForecastData(props) {
     return(
     <div className="col HourlyForecastData border p-2 mt-2 rounded shadow">
       <div className="Hours"><strong>{hours()}</strong></div>
-      <WeatherIcon code={props.data.weather[0].icon}/>
+      <div className="HourlyIcon"><WeatherIcon code={props.data.weather[0].icon}/></div>
       <div className="Temp">
       <span><strong>{Math.round((tempMax() * 9) / 5 + 32)}°</strong></span>
       {" "}|{" "}
