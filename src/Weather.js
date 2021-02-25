@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import * as Icon from 'react-bootstrap-icons';
 import WeatherData from './WeatherData';
+import WeatherHeadline from './WeatherHeadline'
 import HourlyForecast from './HourlyForecast';
 import DailyForecast from './DailyForecast';
 import './Weather.css';
@@ -19,6 +20,7 @@ export default function Weather(props) {
       // country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       icon: response.data.weather[0].icon,
+      id: response.data.weather[0].id,
       description: response.data.weather[0].main,
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed * 2.237),
@@ -87,6 +89,9 @@ export default function Weather(props) {
             unit={unit}
             setUnit={setUnit}
           />
+
+          <WeatherHeadline data={dispalyData} />
+
          <p className="HourlyForecastHeading">Today's weather</p>
          <HourlyForecast 
             city={dispalyData.city} 
