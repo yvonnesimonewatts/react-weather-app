@@ -1,0 +1,67 @@
+/* Footer */
+.Footer {
+  margin: 10px 0 50px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  color: #330867;
+  list-style-type: none;
+}
+
+.Footer .footer-links {
+  padding: 0;
+}
+
+.Footer .footer-links li {
+  display: inline;
+  margin: 0 15px;
+  color: #330867;
+}
+
+.Footer .footer-links li a {
+  color: #330867;
+  text-decoration: none;
+  border-bottom: 1px solid #330867;
+}
+
+.Footer .footer-links li a:hover {
+  color: #a29aaa;
+  border-bottom: 1.5px solid #a29aaa;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.icon-codeslash,
+.icon-github {
+  font-size: 18px;
+}
+
+/* FooterModal */
+.FooterModal {
+  width: 100%;
+  padding: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.FooterModal p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.FooterModal .credits {
+  font-size: 18px;
+}
+
+.FooterModal a {
+  color: #330867;
+  text-decoration: none;
+  border-bottom: 1px solid #330867;
+  font-size: 14px;
+}
+
+.FooterModal a:hover {
+  color: #a29aaa;
+  border-bottom: 1.5px solid #a29aaa;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
