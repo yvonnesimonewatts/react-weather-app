@@ -12,7 +12,7 @@ export default function Footer() {
         <span>
           <Icon.CodeSlash className="icon-codeslash"/> {" "}
         </span>
-        <span><FooterModal /></span>
+        <span><FooterModal/></span>
       </li>
         <li className="github">
           <span>

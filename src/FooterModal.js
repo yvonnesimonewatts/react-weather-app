@@ -9,7 +9,7 @@ export default function FooterModal() {
       <Popup trigger={<a className="modal-link">About</a>} modal>
       <div className="FooterModal">
         <p>
-          <strong>ReactWeatherApp</strong> coded with <Icon.SuitHeartFill className="icon-heartfill"/> by Yvonne Simone.
+          <strong>ReactWeatherApp</strong> <br /> <Icon.CodeSlash className="icon-codeslash"/> with <Icon.SuitHeartFill className="icon-heartfill"/> by Yvonne Simone.
         </p>
           <hr />
               <div className="credits">
@@ -23,7 +23,7 @@ export default function FooterModal() {
                     rel="noopener noreferrer"
                     >
                   OpenWeatherMap API
-              </a>
+                  </a>
                 </li>
                 <li>
                   <a 
@@ -31,25 +31,26 @@ export default function FooterModal() {
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                      Icons made by srip from Flaticon
+                      Icons by srip
                   </a> 
                 </li>
-                  <li>
-                  <a 
-                    href="https://getbootstrap.com/" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >
-                      Bootstrap
-                  </a> 
-                  </li>
-                  <li>
+                
+                <li>
                    <a 
                     href="https://www.npmjs.com/package/reactjs-popup" 
                     target="_blank"
                     rel="noopener noreferrer"
                     >
                       Reactjs Popup
+                  </a> 
+                </li>
+                <li>
+                  <a 
+                    href="https://getbootstrap.com/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                      Bootstrap
                   </a> 
                 </li>
               </ul>

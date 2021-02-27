@@ -1,56 +1,46 @@
 .Weather {
-  max-width: 570px;
+  max-width: 576px;
   margin: 20px auto;
   padding: 20px 20px;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  opacity: 0.9;
+  background: #033649;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
   color: #fff;
 }
 
-/* SEARCH FORM */
-.Weather .search-form {
-  margin-top: 15px 15px 0 15px;
-}
-
 .Weather .btn-search {
-  color: #330867;
+  color: #033649;
 }
 
 .Weather .btn-search:hover {
-  color: #a29aaa;
+  color: #0174f0;
 }
 
 .Weather .btn-current-location:hover {
-  color: #330867;
+  color: #0174f0;
 }
 
-/* DATE & TIME */
-.Weather .date-time {
-  font-size: 14px;
+.WeatherData {
+  margin-top: 30px;
 }
 
-/* SECTION: OVERVIEW */
-.Weather .section-overview {
-  padding-top: 20px;
+.WeatherData .date-time {
+  font-size: 16px;
 }
 
-.Weather .timestamp-wrapper,
-.Weather .temperature-wrapper {
+.WeatherData .timestamp-wrapper,
+.WeatherData .temperature-wrapper {
   padding: 0 15px;
 }
 
-.Weather .location {
+.WeatherData .location {
   margin-top: 10px;
-  font-size: 35px;
-  font-weight: 500;
+  font-size: 36px;
 }
 
 .ConvertTempUnit .temperature {
   padding-right: 30px;
-  font-size: 45px;
-  font-weight: 500;
+  font-size: 46px;
   line-height: 70px;
 }
 
@@ -60,43 +50,48 @@
   left: -25px;
   border-bottom: 1px solid transparent;
   font-size: 22px;
-  font-weight: 500;
 }
 
 .ConvertTempUnit .temp-unit a {
-  color: #ef7d5e;
+  color: #0174f0;
   text-decoration: none;
 }
 
 .ConvertTempUnit .temp-unit a:hover {
-  color: #a29aaa;
-  border-bottom: 1px solid #a29aaa;
+  color: #05def0;
+  border-bottom: 1px solid #05def0;
   transition: all 200ms ease-in-out;
 }
 
-.WeatherData .MainIcon {
-  height: 75px;
-  width: 75px;
+.WeatherData .main-icon {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
 }
 
-.Weather .description {
-  font-size: 25px;
-  font-weight: 500;
+.WeatherData .description {
+  font-size: 26px;
   text-transform: lowercase;
 }
 
-.Weather .additional-data {
+.WeatherData .additional-data {
   margin: 0;
   padding: 0;
   text-align: right;
   list-style-type: none;
+  font-size: 16px;
+}
+
+.WeatherHeadline {
+  margin: 30px 0;
+  padding: 0 15px;
   font-size: 14px;
 }
 
-.Weather .HourlyForecastHeading {
-  margin: 25px 0 0;
-}
-
+.Weather .HourlyForecastHeading,
 .Weather .DailyForecastHeading {
   margin: 25px 0 0;
+  padding-right: 15px;
+  text-align: right;
+  font-size: 16px;
 }

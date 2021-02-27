@@ -3,18 +3,18 @@
 }
 
 .HourlyForecastData {
-  margin: 0 5px;
   text-align: center;
 }
 
-.HourlyForecastData .Hours,
-.HourlyForecastData .Temp {
-  font-size: 14px;
+.HourlyForecastData .hours,
+.HourlyForecastData .temp {
+  margin: 5px 0;
+  font-size: 16px;
 }
 
-.HourlyForecastData .HourlyIcon {
+.HourlyForecastData .hourly-icon {
   display: block;
   margin: 0 auto;
-  height: 30px;
-  width: 30px;
+  height: 27px;
+  width: 27px;
 }

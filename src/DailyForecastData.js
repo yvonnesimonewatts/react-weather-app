@@ -46,59 +46,60 @@ export default function DailyForecastData(props) {
 
   if (props.unit === "celsius") {
   return (
-  <div className="row DailyForecastData border p-2 mt-2 rounded shadow">
-    <div className="col Date">
-      <div><strong>{formatDay()}</strong></div> 
-      <div>{formatDate()}</div> 
+  <div className="row DailyForecastData border p-1 m-1 rounded shadow">
+    <div className="col date">
+      <div className="format-day"><strong>{formatDay()}</strong></div> 
+      <div className="format-date">{formatDate()}</div> 
     </div>
-      <div className="col IconDescription ">
-        <div className="DailyIcon">
-          <WeatherIcon code={props.data.weather[0].icon}/>
-          </div>
-        <div className="col Description">
-          {props.data.weather[0].main}
-          </div>
+    <div className="col d-block m-auto">
+      <div className="daily-icon">
+        <WeatherIcon code={props.data.weather[0].icon}/>
       </div>
-        {/* <div className="col Temp">
+      </div>
+        {/* <div className="col d-block m-auto description">
+          {props.data.weather[0].main}
+        </div> */}
+        {/* <div className="col temp">
           <strong>{Math.round(props.data.temp.day)}°</strong>
         </div> */}
-          <div className="col High">
+          <div className="col high">
             <div><strong>{tempMax()}°</strong></div>
-            <div>High</div>
+            <div className="temp-tag">High</div>
           </div>
-            <div className="col Low">
+            <div className="col low">
               <div><strong>{tempMin()}°</strong></div>
-              <div>Low</div>
+              <div className="temp-tag">Low</div>
             </div>
   </div>
-);
-      } else {
-          return (
-  <div className="row DailyForecastData border p-2 mt-2 rounded shadow">
-    <div className="col Date">
-      <div><strong>{formatDay()}</strong></div> 
-      <div>{formatDate()}</div> 
-    </div>
-      <div className="col IconDescription ">
-        <div className="DailyIcon">
-          <WeatherIcon code={props.data.weather[0].icon}/>
-          </div>
-        <div className="col Description">
-          {props.data.weather[0].main}
-          </div>
+  );
+} else {
+  return (
+    <div className="row DailyForecastData border p-1 m-1 rounded shadow">
+      <div className="col date">
+        <div className="format-day"><strong>{formatDay()}</strong></div> 
+        <div className="format-date">{formatDate()}</div> 
       </div>
-       {/* <div className="col Temp">
-          <strong>{Math.round(props.data.temp.day)}°</strong>
-        </div>  */}
-          <div className="col High">
-            <div><strong>{Math.round((tempMax() * 9) / 5 + 32)}°</strong></div>
-            <div>High</div>
-          </div>
-            <div className="col Low">
-              <div><strong>{Math.round((tempMin() * 9) / 5 + 32)}°</strong></div>
-              <div>Low</div>
+        <div className="col d-block m-auto">
+          <div className="daily-icon ">
+            <WeatherIcon code={props.data.weather[0].icon}/>
             </div>
-  </div>
-);
-      }
+        </div>
+          {/* <div className="col d-block m-auto description">
+            {props.data.weather[0].main}
+            </div> */}
+       
+        {/* <div className="col temp">
+            <strong>{Math.round(props.data.temp.day)}°</strong>
+          </div>  */}
+            <div className="col high">
+              <div><strong>{Math.round((tempMax() * 9) / 5 + 32)}°</strong></div>
+              <div className="temp-tag">High</div>
+            </div>
+              <div className="col low">
+                <div><strong>{Math.round((tempMin() * 9) / 5 + 32)}°</strong></div>
+                <div className="temp-tag">Low</div>
+              </div>
+    </div>
+    );
+  }
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import * as Icon from 'react-bootstrap-icons';
 import WeatherData from './WeatherData';
-import WeatherHeadline from './WeatherHeadline'
+import WeatherHeadline from './WeatherHeadline';
 import HourlyForecast from './HourlyForecast';
 import DailyForecast from './DailyForecast';
 import './Weather.css';
@@ -17,7 +17,6 @@ export default function Weather(props) {
       ready: true,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
-      // country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       icon: response.data.weather[0].icon,
       id: response.data.weather[0].id,
@@ -89,10 +88,10 @@ export default function Weather(props) {
             unit={unit}
             setUnit={setUnit}
           />
-
+        <div className="WeatherHeadline">
           <WeatherHeadline data={dispalyData} />
-
-         <p className="HourlyForecastHeading">Today's weather</p>
+        </div>
+         <p className="HourlyForecastHeading">Today</p>
          <HourlyForecast 
             city={dispalyData.city} 
             unit={unit}
@@ -107,6 +106,6 @@ export default function Weather(props) {
       );
   } else {
     search();
-    return (<div>updating weather</div>);
+    return null;
   }
 }

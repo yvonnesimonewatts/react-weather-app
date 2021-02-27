@@ -3,23 +3,20 @@
   padding: 0;
 }
 
-.App footer {
-  margin: 15px 0;
-  text-align: center;
-  font-family: "Roboto Mono", monospace;
-  font-size: 12px;
-  letter-spacing: -0.5px;
-  color: #330867;
+body {
+  background: linear-gradient(-45deg, #0073f0, #85c9c8, #034d56, #03687f);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
 }
 
-.App .footer-link {
-  color: #330867;
-  text-decoration: none;
-  border-bottom: 1px solid #330867;
-}
-
-.App .footer-link:hover {
-  color: #a29aaa;
-  border-bottom: 1.5px solid #a29aaa;
-  transition: all 200ms ease-in-out;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -1,6 +1,27 @@
-.DailyForecastData .DailyIcon {
+.DailyForecast {
+  margin: 0 auto;
+}
+
+.DailyForecastData .date,
+.DailyForecastData .high,
+.DailyForecastData .low {
+  text-align: center;
+}
+
+.DailyForecastData .format-day,
+.DailyForecastData .high,
+.DailyForecastData .low {
+  font-size: 16px;
+}
+
+.DailyForecastData .format-date,
+.DailyForecastData .temp-tag {
+  font-size: 14px;
+}
+
+.DailyForecastData .daily-icon {
   display: block;
   margin: 0 auto;
-  height: 40px;
-  width: 40px;
+  height: 37px;
+  width: 37px;
 }
