@@ -11,7 +11,7 @@ export default function WeatherData(props) {
           </div>
 
           <div className="row temperature-wrapper">
-            <div className="col">
+            <div className="col-sm-5">
               <div className="location">
                 <span>{props.data.city}</span> 
               </div>
@@ -22,13 +22,13 @@ export default function WeatherData(props) {
                   />
             </div>
 
-              <div className="col d-block m-auto">
+              <div className="col-sm-3 d-block m-auto">
                 <div className="main-icon">
                 <WeatherIcon code={props.data.icon} />
                 </div>
               </div>
 
-                <div className="col align-self-end">
+                <div className="col-sm-4 align-self-end">
                   <ul className="additional-data">
                     <li>
                       <span className="description">
