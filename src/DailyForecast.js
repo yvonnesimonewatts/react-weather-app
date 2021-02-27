@@ -8,18 +8,17 @@ export default function DailyForecast(props) {
   const [displayforecast, setDailyForecast] = useState(null);
 
   function handleDailyForecast(response) {
-    // console.log(response.data);
     setDailyForecast(response.data);
     setLoaded(true);
   }
   if (loaded && props.lat === displayforecast.lat && props.lon === displayforecast.lon) {
     return (
       <div className="row DailyForecast justify-content-center">
-        <DailyForecastData data={displayforecast.daily[0]} unit={props.unit}/>
         <DailyForecastData data={displayforecast.daily[1]} unit={props.unit}/>
         <DailyForecastData data={displayforecast.daily[2]} unit={props.unit}/>
         <DailyForecastData data={displayforecast.daily[3]} unit={props.unit}/>
         <DailyForecastData data={displayforecast.daily[4]} unit={props.unit}/>
+        <DailyForecastData data={displayforecast.daily[5]} unit={props.unit}/>
       </div>
     );
   } else {

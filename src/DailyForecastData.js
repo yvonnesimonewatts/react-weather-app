@@ -56,12 +56,6 @@ export default function DailyForecastData(props) {
         <WeatherIcon code={props.data.weather[0].icon}/>
       </div>
       </div>
-        {/* <div className="col d-block m-auto description">
-          {props.data.weather[0].main}
-        </div> */}
-        {/* <div className="col temp">
-          <strong>{Math.round(props.data.temp.day)}°</strong>
-        </div> */}
           <div className="col high">
             <div><strong>{tempMax()}°</strong></div>
             <div className="temp-tag">High</div>
@@ -84,13 +78,6 @@ export default function DailyForecastData(props) {
             <WeatherIcon code={props.data.weather[0].icon}/>
             </div>
         </div>
-          {/* <div className="col d-block m-auto description">
-            {props.data.weather[0].main}
-            </div> */}
-       
-        {/* <div className="col temp">
-            <strong>{Math.round(props.data.temp.day)}°</strong>
-          </div>  */}
             <div className="col high">
               <div><strong>{Math.round((tempMax() * 9) / 5 + 32)}°</strong></div>
               <div className="temp-tag">High</div>
