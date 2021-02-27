@@ -33,7 +33,6 @@
 .icon-codeslash,
 .icon-github {
   font-size: 16px;
-  color: #fff;
 }
 
 .FooterModal {
@@ -45,6 +44,10 @@
 .FooterModal p {
   text-align: center;
   font-size: 16px;
+}
+
+.FooterModal .icon-codeslash {
+  color: #033649;
 }
 
 .FooterModal .credits {
