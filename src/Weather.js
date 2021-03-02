@@ -91,7 +91,9 @@ export default function Weather(props) {
         <div className="WeatherHeadline">
           <WeatherHeadline data={dispalyData} />
         </div>
-         <p className="HourlyForecastHeading">Today</p>
+          <div className="d-none d-sm-block">
+            <p className="HourlyForecastHeading">Today</p>
+          </div>
          <HourlyForecast 
             city={dispalyData.city} 
             unit={unit}

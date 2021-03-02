@@ -1,7 +1,7 @@
 .Weather {
   max-width: 576px;
   margin: 20px auto;
-  padding: 20px 20px;
+  padding: 20px;
   background: #033649;
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.5px;
@@ -64,9 +64,8 @@
 }
 
 .WeatherData .main-icon {
-  margin: 0 auto;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
 }
 
 .WeatherData .description {

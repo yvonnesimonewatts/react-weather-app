@@ -15,7 +15,7 @@ export default function HourlyForecastData(props) {
 
   if (props.unit === "celsius") {
     return(
-    <div className="col HourlyForecastData border m-1 rounded shadow">
+    <div className="col d-none d-sm-block HourlyForecastData border m-1 rounded shadow">
       <div className="hours">{hours()}</div>
       <div className="hourly-icon"><WeatherIcon code={props.data.weather[0].icon}/></div>
       <div className="temp">
@@ -25,7 +25,7 @@ export default function HourlyForecastData(props) {
   );
   } else {
     return(
-    <div className="col HourlyForecastData border m-1 rounded shadow">
+    <div className="col d-none d-sm-block HourlyForecastData border m-1 rounded shadow">
       <div className="hours">{hours()}</div>
       <div className="hourly-icon"><WeatherIcon code={props.data.weather[0].icon}/></div>
       <div className="temp">

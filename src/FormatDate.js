@@ -42,7 +42,7 @@ export default function FormatDate(props) {
 
   return (
     <div className="FormatDate">
-      {day} | {calendarDate} {month} | {hours}:{minutes}
+    {day} | {calendarDate} {month} | {hours}:{minutes} 
     </div>
   );
 }

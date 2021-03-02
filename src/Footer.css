@@ -35,26 +35,35 @@
   font-size: 16px;
 }
 
-.FooterModal {
-  padding: 20px;
+.popup-content {
+  width: 75%;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
   font-family: "Raleway", sans-serif;
   color: #033649;
 }
 
-.FooterModal p {
-  text-align: center;
+.popup-content p {
   font-size: 16px;
 }
 
-.FooterModal .icon-codeslash {
+.popup-content .icon-codeslash {
   color: #033649;
 }
 
-.FooterModal .credits {
+.popup-content .credits {
+  position: relative;
+  left: -50px;
   font-size: 22px;
 }
 
-.FooterModal a {
+.popup-content ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.popup-content a {
   font-size: 16px;
   color: #033649;
   outline-style: none;
@@ -62,7 +71,7 @@
   border-bottom: 1px solid #033649;
 }
 
-.FooterModal a:hover {
+.popup-content a:hover {
   color: #0174f0;
   outline-style: none;
   border-bottom: 1.5px solid #0174f0;

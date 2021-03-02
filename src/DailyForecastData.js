@@ -46,21 +46,21 @@ export default function DailyForecastData(props) {
 
   if (props.unit === "celsius") {
   return (
-  <div className="row DailyForecastData border p-1 m-1 rounded shadow">
+  <div className="row justify-content-center DailyForecastData border p-1 m-1 rounded shadow">
     <div className="col date">
       <div className="format-day"><strong>{formatDay()}</strong></div> 
-      <div className="format-date">{formatDate()}</div> 
+      <div className="d-none d-md-block format-date">{formatDate()}</div> 
     </div>
-    <div className="col d-block m-auto">
+    <div className="col-sm d-block m-auto">
       <div className="daily-icon">
         <WeatherIcon code={props.data.weather[0].icon}/>
       </div>
       </div>
-          <div className="col high">
+          <div className="col-3 d-inline high">
             <div><strong>{tempMax()}°</strong></div>
             <div className="temp-tag">High</div>
           </div>
-            <div className="col low">
+            <div className="col-3 d-inline low">
               <div><strong>{tempMin()}°</strong></div>
               <div className="temp-tag">Low</div>
             </div>
@@ -68,21 +68,21 @@ export default function DailyForecastData(props) {
   );
 } else {
   return (
-    <div className="row DailyForecastData border p-1 m-1 rounded shadow">
+    <div className="row justify-content-center DailyForecastData border p-1 m-1 rounded shadow">
       <div className="col date">
         <div className="format-day"><strong>{formatDay()}</strong></div> 
-        <div className="format-date">{formatDate()}</div> 
+        <div className="d-none d-md-block format-date">{formatDate()}</div> 
       </div>
-        <div className="col d-block m-auto">
+        <div className="col-sm d-block m-auto">
           <div className="daily-icon ">
             <WeatherIcon code={props.data.weather[0].icon}/>
             </div>
         </div>
-            <div className="col high">
+            <div className="col-3 d-inline high">
               <div><strong>{Math.round((tempMax() * 9) / 5 + 32)}°</strong></div>
               <div className="temp-tag">High</div>
             </div>
-              <div className="col low">
+              <div className="col-3 d-inline low">
                 <div><strong>{Math.round((tempMin() * 9) / 5 + 32)}°</strong></div>
                 <div className="temp-tag">Low</div>
               </div>
