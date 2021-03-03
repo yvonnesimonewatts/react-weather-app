@@ -1,4 +1,5 @@
 import React from 'react';
+import * as Icon from 'react-bootstrap-icons';
 
 export default function FormatDate(props) {
   let days = [
@@ -42,7 +43,9 @@ export default function FormatDate(props) {
 
   return (
     <div className="FormatDate">
+    <span className="last-updated"><Icon.ArrowRepeat /> last updated</span> <br />
     {day} | {calendarDate} {month} | {hours}:{minutes} 
+    
     </div>
   );
 }

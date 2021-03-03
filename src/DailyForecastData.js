@@ -49,7 +49,7 @@ export default function DailyForecastData(props) {
   <div className="row justify-content-center DailyForecastData border p-1 m-1 rounded shadow">
     <div className="col date">
       <div className="format-day"><strong>{formatDay()}</strong></div> 
-      <div className="d-none d-md-block format-date">{formatDate()}</div> 
+      <div className="d-none d-sm-block format-date">{formatDate()}</div> 
     </div>
     <div className="col-sm d-block m-auto">
       <div className="daily-icon">
@@ -71,7 +71,7 @@ export default function DailyForecastData(props) {
     <div className="row justify-content-center DailyForecastData border p-1 m-1 rounded shadow">
       <div className="col date">
         <div className="format-day"><strong>{formatDay()}</strong></div> 
-        <div className="d-none d-md-block format-date">{formatDate()}</div> 
+        <div className="d-none d-sm-block format-date">{formatDate()}</div> 
       </div>
         <div className="col-sm d-block m-auto">
           <div className="daily-icon ">

@@ -16,7 +16,7 @@ export default function ConvertTempUnit(props) {
     return  (
     <div className="ConvertTempUnit">
       <span className="temperature">{Math.round(props.celsius)}</span>
-      <span className="temp-unit"> °C | <a href="/" onClick={convertFahrenheit}>°F</a></span>  
+      <span className="temp-unit"><span className="current-unit"> °C |</span> <a href="/" onClick={convertFahrenheit}>°F</a></span>  
     </div>
       );
     } else {
@@ -24,7 +24,7 @@ export default function ConvertTempUnit(props) {
       return (
       <div className="ConvertTempUnit">
         <span className="temperature">{fahrenheit}</span>
-        <span className="temp-unit">°F | <a href="/" onClick={convertCelsius}>°C</a></span>  
+        <span className="temp-unit"><span className="current-unit"> °F |</span>  <a href="/" onClick={convertCelsius}>°C</a></span>  
       </div>
       );
     }

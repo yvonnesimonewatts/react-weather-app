@@ -28,6 +28,10 @@
   font-size: 16px;
 }
 
+.WeatherData .last-updated {
+  font-size: 12px;
+}
+
 .WeatherData .timestamp-wrapper,
 .WeatherData .temperature-wrapper {
   padding: 0 15px;
@@ -58,9 +62,14 @@
 }
 
 .ConvertTempUnit .temp-unit a:hover {
+  font-size: 24px;
   color: #05def0;
   border-bottom: 1px solid #05def0;
   transition: all 200ms ease-in-out;
+}
+
+.ConvertTempUnit .current-unit {
+  font-size: 20px;
 }
 
 .WeatherData .main-icon {
